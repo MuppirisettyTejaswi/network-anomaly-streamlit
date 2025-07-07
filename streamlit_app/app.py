@@ -27,7 +27,8 @@ h1, h2, h3 {
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("kddcup.data_10_percent_corrected", header=None)
+    df = pd.read_csv("kddcup.data_10_percent/kddcup.data_10_percent_corrected", header=None)
+
     columns = [f"feature_{i}" for i in range(df.shape[1]-1)] + ["label"]
     df.columns = columns
     return df
